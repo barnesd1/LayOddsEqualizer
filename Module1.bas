@@ -1,5 +1,6 @@
 Attribute VB_Name = "Module1"
 Option Explicit
+Public mbCorporate As Boolean
 Public LayPc As Single
 Public BackPc As Single
 Public bStakeNotReturned As Boolean
@@ -14,13 +15,28 @@ Public LayProfit As Single
 Public Difference As Single
 Public BetfairBackCost As Single
 Public BetfairLayCost As Single
-Public NonBetfairBackCost As Single
-Public NonBetfairLayCost As Single
 Public StakeNotReturned As Single
+Public RetentionBack As Single
+Public RetentionLay As Single
+Public CurrSymbol As String
+Public lMaxIterations As Long
+Public sHistBackDesc(1 To 100) As String
+Public sHistLayDesc(1 To 100) As String
+Public iHistBackPc(1 To 100) As Single
+Public iHistLayPc(1 To 100) As Single
+Public iHistBackStake(1 To 100) As Single
+Public iHistBackOdds(1 To 100) As Single
+Public iHistLayStake(1 To 100) As Single
+Public iHistLayOdds(1 To 100) As Single
+Public bHistSNR(1 To 100) As Boolean
+Public iHistoryPosition As Integer
+Public iHistoryUsed As Integer
+
+
 Function ConvertOdds(sTyped As String) As String
 Dim iSlash As Integer
-Dim iLeft As Integer
-Dim iRight As Integer
+Dim iLeft As Double
+Dim iRight As Double
 Dim dOdds As Double
 iSlash = InStr(sTyped, "/")
 If iSlash Then
@@ -42,35 +58,28 @@ Function result() As String
 result = "Stake Not Returned = " + IIf(StakeNotReturned, "YES", "NO") + vbCrLf
 result = result + "Back Commission = " + CStr(BackPc) + "%" + vbCrLf
 result = result + "Lay Commission = " + CStr(LayPc) + "%" + vbCrLf
-result = result + "Back Return = " + Format(BackReturn, "0.00") + vbCrLf
-result = result + "Lay Risk = " + Format(LayRisk, "0.00") + vbCrLf
-result = result + "Back Profit = " + Format(BackProfit, "0.00") + vbCrLf
-result = result + "Lay Profit = " + Format(LayProfit, "0.00") + vbCrLf
-result = result + "Difference = " + Format(Difference, "0.00") + vbCrLf
+result = result + "Back Return = " + CurrSymbol + Format(BackReturn, "0.00") + vbCrLf
+result = result + "Lay Risk = " + CurrSymbol + Format(LayRisk, "0.00") + vbCrLf
+result = result + "Back Profit = " + CurrSymbol + Format(BackProfit, "0.00") + vbCrLf
+result = result + "Lay Profit = " + CurrSymbol + Format(LayProfit, "0.00") + vbCrLf
+Difference = Abs(Val(Format(BackProfit, "0.00")) - Val(Format(LayProfit, "0.00")))
+result = result + "Difference = " + CurrSymbol + Format(Difference, "0.00") + vbCrLf
 If BetfairBackCost > 0 Then
-    result = result + "Exchange Back Profit = " + Format(BetfairBackCost, "0.00") + vbCrLf
+    result = result + "Exchange Back Profit = " + CurrSymbol + Format(BetfairBackCost, "0.00") + vbCrLf
 Else
-    result = result + "Exchange Back Cost = " + Format(BetfairBackCost, "0.00") + vbCrLf
+    result = result + "Exchange Back Cost = " + CurrSymbol + Format(BetfairBackCost, "0.00") + vbCrLf
 End If
 If BetfairLayCost > 0 Then
-    result = result + "Exchange Lay Profit = " + Format(BetfairLayCost, "0.00") + vbCrLf
+    result = result + "Exchange Lay Profit = " + CurrSymbol + Format(BetfairLayCost, "0.00") + vbCrLf
 Else
-    result = result + "Exchange Lay Cost = " + Format(BetfairLayCost, "0.00") + vbCrLf
+    result = result + "Exchange Lay Cost = " + CurrSymbol + Format(BetfairLayCost, "0.00") + vbCrLf
 End If
-If NonBetfairBackCost > 0 Then
-    result = result + "Dutch Profit 1 = " + Format(NonBetfairBackCost, "0.00") + vbCrLf
-Else
-    result = result + "Dutch Cost 1 = " + Format(NonBetfairBackCost, "0.00") + vbCrLf
-End If
-If NonBetfairLayCost > 0 Then
-    result = result + "Dutch Profit 2 = " + Format(NonBetfairLayCost, "0.00")
-Else
-    result = result + "Dutch Cost 2 = " + Format(NonBetfairLayCost, "0.00")
-End If
+result = result + "Retention for Back Bet = " + Format(RetentionBack, "0.0") + "%" + vbCrLf
+result = result + "Retention for Lay Bet = " + Format(RetentionLay, "0.0") + "%"
 End Function
 Sub calc(ByVal How As String)
 Dim bIterate As Boolean
-Dim iTerations As Integer
+Dim iTerations As Long
 iTerations = 0
 If How = "NotEqual" Then
     bIterate = False
@@ -101,14 +110,27 @@ If bIterate = False Then
     Exit Do
 End If
 iTerations = iTerations + 1
-If iTerations > 10000 Then Beep: Beep: Beep: Exit Do
+If iTerations > lMaxIterations Then Beep: Beep: Beep: Exit Do
 Loop While (Difference > 0.02)
-Dim OutGoing As Single
-OutGoing = BackStake + Format(LayStake, "0.00")
-NonBetfairBackCost = (BackStake * BackOdds) - OutGoing
+
 BetfairBackCost = BackProfit - BackStake
-NonBetfairLayCost = (LayStake * LayOdds) - OutGoing
 BetfairLayCost = LayProfit - BackStake
+
+If StakeNotReturned Then
+    RetentionBack = (BackProfit / BackStake) * 100
+    RetentionLay = (LayProfit / BackStake) * 100
+Else
+    If BetfairBackCost > 0 Then
+        RetentionBack = Abs(((BackProfit / BackStake) * 100) - 100)
+    Else
+        RetentionBack = ((BackProfit / BackStake) * 100) - 100
+    End If
+    If BetfairLayCost > 0 Then
+        RetentionLay = Abs(100 - ((LayProfit / BackStake) * 100) - 100)
+    Else
+        RetentionLay = ((LayProfit / BackStake) * 100) - 100
+    End If
+End If
 End Sub
 
 
