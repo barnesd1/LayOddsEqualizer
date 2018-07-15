@@ -1,0 +1,177 @@
+[Root]
+Most Recent Package=Lay Odds Equalizer
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\LayOddsEqualizer.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\System32\MSSTDFMT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\LayOddsEqualizer.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\MSSTDFMT.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\LayOddsEqualizer.exe=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=LayOddsEqualizer
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=LayOddsEqualizer
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|LayOddsEqualizer]
+Icon1=LayOddsEqualizer.exe
+Title1=LayOddsEqualizer
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\Package
+ProjectFolder=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer
+ServerSideCab=
+File1=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\Package\setup.exe
+File2=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\Package\Setup.Lst
+File3=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\Package\LayOddsEqualizer.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Lay Odds Equalizer|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\Package
+
+[Package|Lay Odds Equalizer|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Lay Odds Equalizer|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Lay Odds Equalizer|Files Found]
+
+[Package|Lay Odds Equalizer|Files Released]
+
+[Package|Lay Odds Equalizer|Missing Dependency Information]
+
+[Package|Lay Odds Equalizer|Out-of-Date Dependency Information]
+
+[Package|Lay Odds Equalizer|Files Added]
+
+[Package|Lay Odds Equalizer|Files Removed]
+
+[Package|Lay Odds Equalizer|Files In Project]
+C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\LayOddsEqualizer.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\System32\MSSTDFMT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Lay Odds Equalizer|Configure Registry Files]
+Applicable=No
+
+[Package|Lay Odds Equalizer|Configure Remote Servers]
+Applicable=No
+
+[Package|Lay Odds Equalizer|Install Locations]
+C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\LayOddsEqualizer.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\MSSTDFMT.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Lay Odds Equalizer|Configure Shared Files]
+Applicable=Yes
+C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\LayOddsEqualizer.exe=No
+
+[Package|Lay Odds Equalizer|Distribution]
+Type=single
+Size=
+Title=Lay Odds Equalizer
+
+[Package|Lay Odds Equalizer|Package]
+PackageFolder=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\Package
+ProjectFolder=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer
+ServerSideCab=
+File1=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\Package\setup.exe
+File2=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\Package\Setup.Lst
+File3=C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\Package\LayOddsEqualizer.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Lay Odds Equalizer|IconGroups]
+Group0=LayOddsEqualizer
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Lay Odds Equalizer|LayOddsEqualizer]
+Icon1=LayOddsEqualizer.exe
+Title1=Lay Odds Equalizer
+StartIn1=$(AppPath)
+Key1=Icon1
