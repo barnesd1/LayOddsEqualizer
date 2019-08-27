@@ -1,5 +1,19 @@
 Attribute VB_Name = "Module1"
 Option Explicit
+'VB Constants
+Public Const vbBlue As Long = 16711680
+Public Const vbRed As Long = 255
+Public Const vbBlack As Long = 0
+Public Const vbButtonFace As Long = -2147483633
+Public Const vbHourglass As Integer = 11
+Public Const vbDefault As Integer = 0
+Public Const vbRightButton As Integer = 2
+
+Public Declare Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" _
+(ByVal hwnd As Long, ByVal lpOperation As String, ByVal lpFile As String, _
+ByVal lpParameters As String, ByVal lpDirectory As String, _
+ByVal nShowCmd As Long) As Long
+
 Public mbCorporate As Boolean
 Public LayPc As Single
 Public BackPc As Single
@@ -32,7 +46,17 @@ Public bHistSNR(1 To 100) As Boolean
 Public iHistoryPosition As Integer
 Public iHistoryUsed As Integer
 
-
+Function compare() As String
+'comparison bet text
+Dim s As String
+s = "Back " + CurrSymbol + Format(BackStake, "0.00") + ", Back Odds " + Format(BackOdds, "0.00") + ", Lay Odds " + Format(LayOdds, "0.00") + ", Lay " + CurrSymbol + Format(LayStake, "0.00")
+If BetfairLayCost > 0 Then
+    s = s + ", Profit " + CurrSymbol + Format(BetfairLayCost, "0.00")
+Else
+    s = s + ", Cost " + CurrSymbol + Format(BetfairLayCost, "0.00")
+End If
+compare = s
+End Function
 Function ConvertOdds(sTyped As String) As String
 Dim iSlash As Integer
 Dim iLeft As Double
@@ -43,7 +67,7 @@ If iSlash Then
     If iSlash = 1 Then
         Beep
     End If
-    iLeft = Val(Left(sTyped, iSlash))
+    iLeft = Val(left(sTyped, iSlash))
     iRight = Val(Mid(sTyped, iSlash + 1, Len(sTyped) - iSlash))
     If iRight = 0 Then iRight = 1
     dOdds = (iLeft / iRight) + 1
@@ -76,6 +100,7 @@ Else
 End If
 result = result + "Retention for Back Bet = " + Format(RetentionBack, "0.0") + "%" + vbCrLf
 result = result + "Retention for Lay Bet = " + Format(RetentionLay, "0.0") + "%"
+
 End Function
 Sub calc(ByVal How As String)
 Dim bIterate As Boolean
