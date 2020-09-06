@@ -6,25 +6,55 @@ Begin VB.Form frmMain
    ClientLeft      =   150
    ClientTop       =   495
    ClientWidth     =   6630
-   BeginProperty Font 
-   EndProperty
-   Font            =   "frmMain.frx":0000
-   Icon            =   "frmMain.frx":0018
+   Icon            =   "frmMain.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    ScaleHeight     =   4965
    ScaleWidth      =   6630
+   Begin VB.Frame fraBackPc 
+      BorderStyle     =   0  'None
+      Height          =   400
+      Left            =   4660
+      TabIndex        =   30
+      Top             =   120
+      Width           =   1860
+      Begin VB.OptionButton optBackPc 
+         Caption         =   "5.0"
+         Height          =   255
+         Index           =   1
+         Left            =   1320
+         TabIndex        =   33
+         ToolTipText     =   "Right-Click to custom"
+         Top             =   120
+         Width           =   545
+      End
+      Begin VB.OptionButton optBackPc 
+         Caption         =   "0"
+         Height          =   255
+         Index           =   0
+         Left            =   840
+         TabIndex        =   32
+         ToolTipText     =   "Right-Click to custom"
+         Top             =   120
+         Width           =   375
+      End
+      Begin VB.Label Label1 
+         Caption         =   "Back %ge"
+         Height          =   255
+         Left            =   0
+         TabIndex        =   31
+         Top             =   120
+         Width           =   735
+      End
+   End
    Begin VB.PictureBox picDutch 
       AutoSize        =   -1  'True
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":045A
       Height          =   1260
       Left            =   60
-      Picture         =   "frmMain.frx":0472
+      Picture         =   "frmMain.frx":0442
       ScaleHeight     =   1200
       ScaleWidth      =   330
-      TabIndex        =   32
+      TabIndex        =   29
       Top             =   1260
       Width           =   390
    End
@@ -32,64 +62,43 @@ Begin VB.Form frmMain
       BackColor       =   &H00C0C0C0&
       Caption         =   "   Under Lay                                   Quick %ge  Slider                        Over Lay"
       ClipControls    =   0   'False
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":0AC0
       ForeColor       =   &H00800080&
       Height          =   1215
       Left            =   120
-      TabIndex        =   21
+      TabIndex        =   19
       Top             =   3600
       Width           =   6375
       Begin VB.CommandButton cmdClearHistory 
          Caption         =   "CLEAR"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmMain.frx":0AD8
          Height          =   210
          Left            =   1620
-         TabIndex        =   31
-         Top             =   960
+         TabIndex        =   28
+         Top             =   990
          Width           =   735
-      End
-      Begin VB.PictureBox picUpgrade 
-         Appearance      =   0  'Flat
-         AutoSize        =   -1  'True
-         BackColor       =   &H80000005&
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmMain.frx":0AF2
-         ForeColor       =   &H80000008&
-         Height          =   390
-         Left            =   0
-         Picture         =   "frmMain.frx":0B0A
-         ScaleHeight     =   360
-         ScaleWidth      =   360
-         TabIndex        =   29
-         ToolTipText     =   "Shareware: Unlock full version today1"
-         Top             =   240
-         Width           =   390
       End
       Begin VB.CommandButton cmdLoseZeroBack 
          Caption         =   "Lose 0 on &Back"
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmMain.frx":120C
          Height          =   560
          Left            =   240
-         TabIndex        =   26
+         TabIndex        =   24
          ToolTipText     =   "Works out best Lay bet"
          Top             =   375
          Width           =   1230
       End
       Begin VB.CommandButton cmdLoseZeroLay 
          Caption         =   "Lose 0 on &Lay"
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmMain.frx":1224
          Height          =   560
          Left            =   4920
-         TabIndex        =   25
+         TabIndex        =   23
          ToolTipText     =   "Works out best Lay bet"
          Top             =   375
          Width           =   1230
@@ -100,7 +109,7 @@ Begin VB.Form frmMain
          Index           =   3
          Left            =   4140
          MousePointer    =   8  'Size NW SE
-         Picture         =   "frmMain.frx":123C
+         Picture         =   "frmMain.frx":0A90
          Top             =   600
          Width           =   570
       End
@@ -110,7 +119,7 @@ Begin VB.Form frmMain
          Index           =   2
          Left            =   3600
          MousePointer    =   7  'Size N S
-         Picture         =   "frmMain.frx":1825
+         Picture         =   "frmMain.frx":1079
          Top             =   600
          Width           =   540
       End
@@ -120,7 +129,7 @@ Begin VB.Form frmMain
          Index           =   1
          Left            =   3060
          MousePointer    =   9  'Size W E
-         Picture         =   "frmMain.frx":1CB1
+         Picture         =   "frmMain.frx":1505
          Top             =   600
          Width           =   540
       End
@@ -130,7 +139,7 @@ Begin VB.Form frmMain
          Index           =   0
          Left            =   2520
          MousePointer    =   6  'Size NE SW
-         Picture         =   "frmMain.frx":216F
+         Picture         =   "frmMain.frx":19C3
          Top             =   600
          Width           =   540
       End
@@ -138,13 +147,10 @@ Begin VB.Form frmMain
          Alignment       =   2  'Center
          BackColor       =   &H00C0C0C0&
          Caption         =   "Bet History"
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmMain.frx":269F
          ForeColor       =   &H00800080&
          Height          =   435
          Left            =   1570
-         TabIndex        =   30
+         TabIndex        =   27
          Top             =   600
          Width           =   850
          WordWrap        =   -1  'True
@@ -153,13 +159,19 @@ Begin VB.Form frmMain
          BackStyle       =   0  'Transparent
          Caption         =   ">1%"
          BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmMain.frx":26B7
          ForeColor       =   &H000000FF&
          Height          =   255
          Index           =   1
          Left            =   3960
-         TabIndex        =   28
+         TabIndex        =   26
          Top             =   240
          Width           =   375
       End
@@ -167,13 +179,19 @@ Begin VB.Form frmMain
          BackStyle       =   0  'Transparent
          Caption         =   "<0.5%"
          BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmMain.frx":26C7
          ForeColor       =   &H00FF0000&
          Height          =   255
          Index           =   0
          Left            =   2520
-         TabIndex        =   27
+         TabIndex        =   25
          Top             =   240
          Width           =   615
       End
@@ -181,13 +199,19 @@ Begin VB.Form frmMain
          BackStyle       =   0  'Transparent
          Caption         =   ">0.5%"
          BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmMain.frx":26D7
          ForeColor       =   &H000000FF&
          Height          =   255
          Index           =   0
          Left            =   3360
-         TabIndex        =   24
+         TabIndex        =   22
          Top             =   240
          Width           =   615
       End
@@ -195,12 +219,18 @@ Begin VB.Form frmMain
          BackStyle       =   0  'Transparent
          Caption         =   "="
          BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   14.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmMain.frx":26E7
          ForeColor       =   &H00800080&
          Height          =   255
          Left            =   3120
-         TabIndex        =   23
+         TabIndex        =   21
          Top             =   240
          Width           =   255
       End
@@ -208,87 +238,55 @@ Begin VB.Form frmMain
          BackStyle       =   0  'Transparent
          Caption         =   "<1%"
          BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmMain.frx":26F7
          ForeColor       =   &H00FF0000&
          Height          =   255
          Index           =   1
          Left            =   2040
-         TabIndex        =   22
+         TabIndex        =   20
          Top             =   240
          Width           =   375
       End
    End
    Begin VB.TextBox txtLayDesc 
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":2707
       Height          =   285
       Left            =   180
-      TabIndex        =   20
+      TabIndex        =   18
       ToolTipText     =   "Lay Desc"
       Top             =   2700
       Width           =   1155
    End
    Begin VB.TextBox txtBackDesc 
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":271F
       Height          =   285
       Left            =   180
-      TabIndex        =   19
+      TabIndex        =   17
       ToolTipText     =   "Back Desc"
       Top             =   900
       Width           =   1155
    End
    Begin VB.OptionButton optLayPc 
       Caption         =   "5.0"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":2737
-      Height          =   255
-      Index           =   4
-      Left            =   5760
-      TabIndex        =   18
-      ToolTipText     =   "Right-Click to custom"
-      Top             =   240
-      Width           =   615
-   End
-   Begin VB.OptionButton optLayPc 
-      Caption         =   "3.0"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":274F
-      Height          =   255
-      Index           =   3
-      Left            =   5040
-      TabIndex        =   17
-      ToolTipText     =   "Right-Click to custom"
-      Top             =   240
-      Width           =   615
-   End
-   Begin VB.OptionButton optLayPc 
-      Caption         =   "2.0"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":2767
       Height          =   255
       Index           =   2
-      Left            =   4320
+      Left            =   4080
       TabIndex        =   16
       ToolTipText     =   "Right-Click to custom"
       Top             =   240
       Value           =   -1  'True
-      Width           =   615
+      Width           =   530
    End
    Begin VB.OptionButton optLayPc 
-      Caption         =   "1.0"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":277F
+      Caption         =   "2.0"
       Height          =   255
       Index           =   1
-      Left            =   3600
+      Left            =   3480
       TabIndex        =   15
       ToolTipText     =   "Right-Click to custom"
       Top             =   240
@@ -296,22 +294,16 @@ Begin VB.Form frmMain
    End
    Begin VB.OptionButton optLayPc 
       Caption         =   "0"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":2797
       Height          =   255
       Index           =   0
       Left            =   3000
       TabIndex        =   13
       ToolTipText     =   "Fixed at Zero"
       Top             =   240
-      Width           =   495
+      Width           =   375
    End
    Begin VB.CheckBox chkStakeNotReturned 
       Caption         =   "Check1"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":27AF
       Height          =   255
       Left            =   1920
       TabIndex        =   12
@@ -320,8 +312,14 @@ Begin VB.Form frmMain
    End
    Begin VB.TextBox txtResult 
       BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Font            =   "frmMain.frx":27C7
       Height          =   3015
       Left            =   3000
       MultiLine       =   -1  'True
@@ -331,9 +329,6 @@ Begin VB.Form frmMain
    End
    Begin VB.CommandButton cmdNECalc 
       Caption         =   "Not Equal &Calc"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":27D7
       Height          =   560
       Left            =   120
       TabIndex        =   5
@@ -352,8 +347,14 @@ Begin VB.Form frmMain
          SubFormatType   =   2
       EndProperty
       BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Font            =   "frmMain.frx":27EF
       Height          =   465
       Left            =   1500
       TabIndex        =   3
@@ -371,8 +372,14 @@ Begin VB.Form frmMain
          SubFormatType   =   1
       EndProperty
       BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Font            =   "frmMain.frx":27FF
       Height          =   465
       Left            =   1500
       TabIndex        =   2
@@ -390,8 +397,14 @@ Begin VB.Form frmMain
          SubFormatType   =   1
       EndProperty
       BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Font            =   "frmMain.frx":280F
       Height          =   465
       Left            =   1500
       TabIndex        =   1
@@ -409,8 +422,14 @@ Begin VB.Form frmMain
          SubFormatType   =   2
       EndProperty
       BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
-      Font            =   "frmMain.frx":281F
       Height          =   465
       Left            =   1500
       TabIndex        =   0
@@ -419,9 +438,6 @@ Begin VB.Form frmMain
    End
    Begin VB.CommandButton cmdEqualize 
       Caption         =   "&Equalize"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":282F
       Height          =   560
       Left            =   1560
       TabIndex        =   4
@@ -440,9 +456,6 @@ Begin VB.Form frmMain
    End
    Begin VB.Label Label6 
       Caption         =   "Lay %ge"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":2847
       Height          =   375
       Left            =   2280
       TabIndex        =   14
@@ -452,9 +465,6 @@ Begin VB.Form frmMain
    Begin VB.Label lblLayStake 
       Alignment       =   1  'Right Justify
       Caption         =   "Lay Stake"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":285F
       Height          =   255
       Left            =   240
       TabIndex        =   10
@@ -464,9 +474,6 @@ Begin VB.Form frmMain
    Begin VB.Label Label4 
       Alignment       =   1  'Right Justify
       Caption         =   "Lay Odds"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":2877
       Height          =   255
       Left            =   240
       TabIndex        =   9
@@ -476,9 +483,6 @@ Begin VB.Form frmMain
    Begin VB.Label Label3 
       Alignment       =   1  'Right Justify
       Caption         =   "Back Odds"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":288F
       Height          =   255
       Left            =   240
       TabIndex        =   8
@@ -488,9 +492,6 @@ Begin VB.Form frmMain
    Begin VB.Label Label2 
       Alignment       =   1  'Right Justify
       Caption         =   "Stake Not Returned"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":28A7
       Height          =   300
       Left            =   240
       TabIndex        =   7
@@ -500,9 +501,6 @@ Begin VB.Form frmMain
    Begin VB.Label lblBackStake 
       Alignment       =   1  'Right Justify
       Caption         =   "Back Stake "
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmMain.frx":28BF
       Height          =   255
       Left            =   240
       TabIndex        =   6
@@ -574,6 +572,8 @@ Begin VB.Form frmMain
    End
    Begin VB.Menu mnuUpgrade 
       Caption         =   "&Unlock Full Features"
+      Enabled         =   0   'False
+      Visible         =   0   'False
    End
    Begin VB.Menu mnuHelp 
       Caption         =   "&Help"
@@ -594,7 +594,7 @@ Dim mbCalcing As Boolean
 Dim sCompare As String
 
 Private Sub chkStakeNotReturned_Click()
-If chkStakeNotReturned.value Then
+If chkStakeNotReturned.Value Then
     bStakeNotReturned = True
 Else
     bStakeNotReturned = False
@@ -616,7 +616,7 @@ If BackStake = 0 Or LayOdds = 0 Or BackOdds = 0 Then
     Exit Sub
 End If
 Me.MousePointer = vbHourglass
-If chkStakeNotReturned.value Then
+If chkStakeNotReturned.Value Then
     StakeNotReturned = BackStake
 Else
     StakeNotReturned = 0
@@ -631,24 +631,24 @@ Me.MousePointer = vbDefault
 End Sub
 
 Private Sub cmdLoseZeroBack_Click()
-If picUpgrade.visible Then mnuAbout_Click: Exit Sub
+If picUpgrade.Visible Then mnuAbout_Click: Exit Sub
 If BackStake = 0 Or LayOdds = 0 Or BackOdds = 0 Then Beep: Exit Sub
 
 mbCalcing = True
-cmdEqualize.value = True
+cmdEqualize.Value = True
 
 If BetfairBackCost = 0 Then Beep: mbCalcing = False: Exit Sub
 If BetfairBackCost > 0.01 Then
     Do
         LayStake = LayStake + 0.01
         txtLayStake.Text = Format(LayStake, "0.00")
-        cmdNECalc.value = True
+        cmdNECalc.Value = True
     Loop While Val(Format(BetfairBackCost, "0.00")) > 0
 Else
     Do
         LayStake = LayStake - 0.01
         txtLayStake.Text = Format(LayStake, "0.00")
-        cmdNECalc.value = True
+        cmdNECalc.Value = True
     Loop While Val(Format(BetfairBackCost, "0.00")) < 0
 End If
 
@@ -659,7 +659,7 @@ End Sub
 Private Sub cmdNECalc_Click()
 If BackStake = 0 Or LayOdds = 0 Or BackOdds = 0 Or LayStake = 0 Then Beep: Exit Sub
 Me.MousePointer = vbHourglass
-If chkStakeNotReturned.value Then
+If chkStakeNotReturned.Value Then
     StakeNotReturned = BackStake
 Else
     StakeNotReturned = 0
@@ -672,11 +672,11 @@ Me.MousePointer = vbDefault
 End Sub
 
 Private Sub cmdLoseZeroLay_Click()
-If picUpgrade.visible Then mnuAbout_Click: Exit Sub
+If picUpgrade.Visible Then mnuAbout_Click: Exit Sub
 If BackStake = 0 Or LayOdds = 0 Or BackOdds = 0 Then Beep: Exit Sub
 
 mbCalcing = True
-cmdEqualize.value = True
+cmdEqualize.Value = True
 
 If BetfairLayCost = 0 Then Beep: mbCalcing = False: Exit Sub
 
@@ -684,13 +684,13 @@ If BetfairLayCost > 0.01 Then
     Do
         LayStake = LayStake - 0.01
         txtLayStake.Text = Format(LayStake, "0.00")
-        cmdNECalc.value = True
+        cmdNECalc.Value = True
     Loop While Val(Format(BetfairLayCost, "0.00")) > 0
 Else
     Do
         LayStake = LayStake + 0.01
         txtLayStake.Text = Format(LayStake, "0.00")
-        cmdNECalc.value = True
+        cmdNECalc.Value = True
     Loop While Val(Format(BetfairLayCost, "0.00")) < 0
 End If
 mbCalcing = False
@@ -698,19 +698,19 @@ Call AddToHistory
 End Sub
 
 Private Sub Form_Load()
-If app.Revision = 99 Then
-    mnuUpgrade.visible = True
-    picUpgrade.visible = True
-Else
-    mnuUpgrade.visible = False
-    picUpgrade.visible = False
-End If
+'If App.Revision = 99 Then
+'    mnuUpgrade.Visible = True
+'    picUpgrade.Visible = True
+'Else
+'    mnuUpgrade.Visible = False
+'    picUpgrade.Visible = False
+'End If
 
 LayPc = 2#
 BackPc = 0#
-mnuBackPc.caption = "Back Commission " + CStr(BackPc) + "%"
-mnuLayPc.caption = "Lay Commission " + CStr(LayPc) + "%"
-chkStakeNotReturned.value = 0
+mnuBackPc.Caption = "Back Commission " + CStr(BackPc) + "%"
+mnuLayPc.Caption = "Lay Commission " + CStr(LayPc) + "%"
+chkStakeNotReturned.Value = 0
 cmdEqualize.Enabled = True
 cmdNECalc.Enabled = True
 mbLoading = True
@@ -747,7 +747,7 @@ DoEvents
 DoEvents
 imgHistory(Index).Appearance = 1
 Next i
-If picUpgrade.visible Then Call mnuAbout_Click
+If picUpgrade.Visible Then Call mnuAbout_Click
 If iHistoryUsed = 0 Then Beep: Exit Sub
 ' move to history item
 Dim iMoveTo As Integer
@@ -781,28 +781,28 @@ If (iHistoryPosition <> iMoveTo) Or txtLayStake.Text = "" Then
     LayStake = iHistLayStake(iMoveTo)
     txtLayOdds.Text = ConvertOdds(Val(iHistLayOdds(iMoveTo)))
     LayOdds = iHistLayOdds(iMoveTo)
-    chkStakeNotReturned.value = Abs(bHistSNR(iMoveTo))
+    chkStakeNotReturned.Value = Abs(bHistSNR(iMoveTo))
     Call chkStakeNotReturned_Click
     
-    lblHistory.caption = "Bet History " + CStr(iHistoryPosition) + " of " + CStr(iHistoryUsed)
+    lblHistory.Caption = "Bet History " + CStr(iHistoryPosition) + " of " + CStr(iHistoryUsed)
     mbCalcing = True
     cmdNECalc.SetFocus
-    cmdNECalc.value = True
+    cmdNECalc.Value = True
     mbCalcing = False
 End If
 End Sub
 Public Sub SetLayPcOpt()
     Dim i As Integer
     For i = 0 To 4
-        If Val(optLayPc(i).caption) = LayPc Then
-            optLayPc(i).value = True
+        If Val(optLayPc(i).Caption) = LayPc Then
+            optLayPc(i).Value = True
             Exit Sub
         End If
     Next
 End Sub
 Public Sub AddToHistory()
 If iHistoryUsed >= 100 Then
-    If Msgbox("Maximum 100 history reached, click Ok to make to clear the history and make this item 1, or Cancel to make this item 100", vbOKCancel, "History full") = vbOk Then
+    If MsgBox("Maximum 100 history reached, click Ok to make to clear the history and make this item 1, or Cancel to make this item 100", vbOKCancel, "History full") = vbOK Then
         iHistoryUsed = 0
     Else
         iHistoryUsed = 99
@@ -832,19 +832,19 @@ iHistBackOdds(i) = Val(txtBackOdds.Text)
 iHistLayStake(i) = Val(txtLayStake.Text)
 iHistLayOdds(i) = Val(txtLayOdds.Text)
 bHistSNR(i) = bStakeNotReturned
-lblHistory.caption = "Bet History " + CStr(iHistoryPosition) + " of " + CStr(iHistoryUsed)
+lblHistory.Caption = "Bet History " + CStr(iHistoryPosition) + " of " + CStr(iHistoryUsed)
 End Sub
 
 Private Sub lblEqual_Click()
-If picUpgrade.visible Then picUpgrade_Click: Exit Sub
+If picUpgrade.Visible Then picUpgrade_Click: Exit Sub
 
 cmdEqualize.SetFocus
-cmdEqualize.value = True
+cmdEqualize.Value = True
 
 End Sub
 
 Private Sub lblO_Click(Index As Integer)
-If picUpgrade.visible Then picUpgrade_Click: Exit Sub
+If picUpgrade.Visible Then picUpgrade_Click: Exit Sub
 Dim mult As Single
 Select Case (Index)
 Case 0: mult = 1.005
@@ -854,11 +854,11 @@ End Select
 txtLayStake.Text = ConvertOdds(LayStake * mult)
 LayStake = Val(txtLayStake.Text)
 cmdNECalc.SetFocus
-cmdNECalc.value = True
+cmdNECalc.Value = True
 End Sub
 
 Private Sub lblU_Click(Index As Integer)
-If picUpgrade.visible Then picUpgrade_Click: Exit Sub
+If picUpgrade.Visible Then picUpgrade_Click: Exit Sub
 Dim mult As Single
 Select Case (Index)
 Case 0: mult = 0.995
@@ -868,29 +868,29 @@ End Select
 txtLayStake.Text = ConvertOdds(LayStake * mult)
 LayStake = Val(txtLayStake.Text)
 cmdNECalc.SetFocus
-cmdNECalc.value = True
+cmdNECalc.Value = True
 End Sub
 
 
 Private Sub mnuAbout_Click()
 Dim sMsg As String
 Dim iResult As Integer
-sMsg = "Lay Odds Equalizer v" + CStr(app.Major) + "." + CStr(app.Minor) + "." + CStr(app.Revision)
-If app.Revision = 99 Then
+sMsg = "Lay Odds Equalizer v" + CStr(App.Major) + "." + CStr(App.Minor) + "." + CStr(App.Revision)
+If App.Revision = 99 Then
     sMsg = sMsg + " TRIAL"
 Else
     sMsg = sMsg + " FULL"
 End If
 sMsg = sMsg + " Edition"
 sMsg = sMsg + vbCrLf + "Written by David J. Barnes, London, UK" + vbCrLf + "Released under public license at GitHub" + vbCrLf + vbCrLf + "Note: use of this application is entirely at your own risk, gamble responsibly" + vbCrLf + vbCrLf + "Click Yes to Visit https://github.com/barnesd1/LayOddsEqualizer" + vbCrLf + "Click No to Donate £5.00 towards development of this application at http://paypal.me/LayOddsEqualizer/5"
-iResult = Msgbox(sMsg, vbInformation + vbYesNoCancel, "About Lay Odds Equalizer")
+iResult = MsgBox(sMsg, vbInformation + vbYesNoCancel, "About Lay Odds Equalizer")
 If iResult = vbYes Then Call ShellExecute(Me.hwnd, "open", "https://github.com/barnesd1/LayOddsEqualizer", "", "", 4)
 If iResult = vbNo Then Call ShellExecute(Me.hwnd, "open", "http://paypal.me/LayOddsEqualizer/5", "", "", 4)
 End Sub
 
 Private Sub mnuBackPc_Click()
 BackPc = Val(InputBox("Back Commission Percent ?", , BackPc))
-mnuBackPc.caption = "Back Commission " + CStr(BackPc) + "%"
+mnuBackPc.Caption = "Back Commission " + CStr(BackPc) + "%"
 End Sub
 
 Private Sub mnuBFDiscount_Click()
@@ -902,7 +902,7 @@ If BF = 0 Then Beep: Exit Sub
 BFDiscount = Val(InputBox("Enter Betfair Discount Percentage on your Account?", "Betfair Discount Calculator"))
 If BFDiscount = 0 Then Beep: Exit Sub
 BFLayCom = BF * (100 - BFDiscount) / 100
-Msgbox "You will be paying " + CStr(BF) + " * (100 - " + CStr(BFDiscount) + ") / 100 so you should use" + vbCrLf + CStr(BFLayCom) + "% in your Betfair lay calculations", vbExclamation + vbOkOnly
+MsgBox "You will be paying " + CStr(BF) + " * (100 - " + CStr(BFDiscount) + ") / 100 so you should use" + vbCrLf + CStr(BFLayCom) + "% in your Betfair lay calculations", vbExclamation + vbOKOnly
 End Sub
 
 Private Sub mnuCorporateColours_Click()
@@ -938,16 +938,16 @@ Else
     lblO(0).ForeColor = vbBlack
 End If
 If mnuCorporateColours.Checked Then
-    SaveSetting app.exename, "Colours", "Corporate", "YES"
+    SaveSetting App.EXEName, "Colours", "Corporate", "YES"
 Else
-    SaveSetting app.exename, "Colours", "Corporate", "NO"
+    SaveSetting App.EXEName, "Colours", "Corporate", "NO"
 End If
 End Sub
 
 Private Sub mnuCurrSymbol_Click()
 Dim sCurrSymbol As String
 sCurrSymbol = InputBox("Enter Currency Symbol ?", , CurrSymbol)
-If Len(sCurrSymbol) > 3 Then Msgbox "Maximum currency symbol length is 3": Exit Sub
+If Len(sCurrSymbol) > 3 Then MsgBox "Maximum currency symbol length is 3": Exit Sub
 If sCurrSymbol <> CurrSymbol Then
    CurrSymbol = sCurrSymbol
    UpdateCurrency
@@ -955,10 +955,10 @@ If sCurrSymbol <> CurrSymbol Then
 End If
 End Sub
 Sub UpdateCurrency()
-    cmdLoseZeroBack.caption = "Lose " + CurrSymbol + "0 on &Back"
-    cmdLoseZeroLay.caption = "Lose " + CurrSymbol + "0 on &Lay"
-    lblBackStake.caption = "Back Stake " + CurrSymbol
-    lblLayStake.caption = "Lay Stake " + CurrSymbol
+    cmdLoseZeroBack.Caption = "Lose " + CurrSymbol + "0 on &Back"
+    cmdLoseZeroLay.Caption = "Lose " + CurrSymbol + "0 on &Lay"
+    lblBackStake.Caption = "Back Stake " + CurrSymbol
+    lblLayStake.Caption = "Lay Stake " + CurrSymbol
 End Sub
 Private Sub mnuExit_Click()
     SaveSettings
@@ -967,30 +967,33 @@ End Sub
 
 Private Sub mnuLayPc_Click()
 LayPc = Val(InputBox("Lay Commission Percent ?", , LayPc))
-mnuLayPc.caption = "Lay Commission " + CStr(LayPc) + "%"
+mnuLayPc.Caption = "Lay Commission " + CStr(LayPc) + "%"
 End Sub
 
 
 
 
 Private Sub SaveSettings()
-SaveSetting app.exename, "Settings", "Currency", CurrSymbol
-SaveSetting app.exename, "Settings", "LayOdds1", optLayPc(1).caption
-SaveSetting app.exename, "Settings", "LayOdds2", optLayPc(2).caption
-SaveSetting app.exename, "Settings", "LayOdds3", optLayPc(3).caption
-SaveSetting app.exename, "Settings", "LayOdds4", optLayPc(4).caption
-SaveSetting app.exename, "Position", "Top", CStr(frmMain.Top)
-SaveSetting app.exename, "Position", "Left", CStr(frmMain.left)
-SaveSetting app.exename, "Settings", "Iterations", CStr(lMaxIterations)
-SaveSetting app.exename, "Settings", "DefaultPercent", CStr(LayPc)
+SaveSetting App.EXEName, "Settings", "Currency", CurrSymbol
+SaveSetting App.EXEName, "Settings", "LayOdds1", optLayPc(1).Caption
+SaveSetting App.EXEName, "Settings", "LayOdds2", optLayPc(2).Caption
+'SaveSetting App.EXEName, "Settings", "LayOdds3", optLayPc(3).Caption
+'SaveSetting App.EXEName, "Settings", "LayOdds4", optLayPc(4).Caption
+SaveSetting App.EXEName, "Settings", "BackOdds1", optBackPc(1).Caption
+SaveSetting App.EXEName, "Position", "Top", CStr(frmMain.Top)
+SaveSetting App.EXEName, "Position", "Left", CStr(frmMain.Left)
+SaveSetting App.EXEName, "Settings", "Iterations", CStr(lMaxIterations)
+SaveSetting App.EXEName, "Settings", "DefaultLayPercent", CStr(LayPc)
+SaveSetting App.EXEName, "Settings", "DefaultBackPercent", CStr(BackPc)
 End Sub
 Private Sub ReadSettings()
-CurrSymbol = left(GetSetting(app.exename, "Settings", "Currency", "£"), 3)
-optLayPc(1).caption = CStr(Val(GetSetting(app.exename, "Settings", "LayOdds1")))
-optLayPc(2).caption = CStr(Val(GetSetting(app.exename, "Settings", "LayOdds2")))
-optLayPc(3).caption = CStr(Val(GetSetting(app.exename, "Settings", "LayOdds3")))
-optLayPc(4).caption = CStr(Val(GetSetting(app.exename, "Settings", "LayOdds4")))
-lMaxIterations = Val(GetSetting(app.exename, "Settings", "Iterations"))
+CurrSymbol = Left(GetSetting(App.EXEName, "Settings", "Currency", "£"), 3)
+optLayPc(1).Caption = CStr(Val(GetSetting(App.EXEName, "Settings", "LayOdds1")))
+optLayPc(2).Caption = CStr(Val(GetSetting(App.EXEName, "Settings", "LayOdds2")))
+'optLayPc(3).Caption = CStr(Val(GetSetting(App.EXEName, "Settings", "LayOdds3")))
+'optLayPc(4).Caption = CStr(Val(GetSetting(App.EXEName, "Settings", "LayOdds4")))
+optBackPc(1).Caption = CStr(Val(GetSetting(App.EXEName, "Settings", "BackOdds1")))
+lMaxIterations = Val(GetSetting(App.EXEName, "Settings", "Iterations"))
 Select Case lMaxIterations
 Case 10000:
     Call mnuMax_Click(0)
@@ -1006,27 +1009,32 @@ Case Else:
     Call mnuMax_Click(3)
 End Select
 
-Dim dDefaultPercent As Double
-dDefaultPercent = Val(GetSetting(app.exename, "Settings", "DefaultPercent"))
+Dim dDefaultLayPercent As Double
+dDefaultLayPercent = Val(GetSetting(App.EXEName, "Settings", "DefaultLayPercent"))
 Dim i As Integer
 Dim dTotal As Double, dThis As Double
 dTotal = 0
-For i = 0 To 4
-    dThis = Val(optLayPc(i).caption)
-    If dThis = dDefaultPercent Then optLayPc(i).value = True
+For i = 0 To 2 '4
+    dThis = Val(optLayPc(i).Caption)
+    If dThis = dDefaultLayPercent Then optLayPc(i).Value = True
     dTotal = dTotal + dThis
 Next i
 If dTotal = 0 Then
     ' reset to default
-    optLayPc(1).caption = "1.15"
-    optLayPc(2).caption = "2"
-    optLayPc(3).caption = "4.7"
-    optLayPc(4).caption = "5"
+    optLayPc(1).Caption = "2"
+    optLayPc(2).Caption = "5"
+    'optLayPc(3).Caption = "4.7"
+    'optLayPc(4).Caption = "5"
+    optBackPc(1).Caption = "2"
 End If
-frmMain.Top = Val(GetSetting(app.exename, "Position", "Top", "1000"))
-frmMain.left = Val(GetSetting(app.exename, "Position", "Left", "1000"))
+Dim dDefaultBackPercent As Double
+dDefaultBackPercent = Val(GetSetting(App.EXEName, "Settings", "DefaultBackPercent"))
+If dDefaultBackPercent = 0 Then optBackPc(0).Value = True Else optBackPc(1).Value = True
+
+frmMain.Top = Val(GetSetting(App.EXEName, "Position", "Top", "1000"))
+frmMain.Left = Val(GetSetting(App.EXEName, "Position", "Left", "1000"))
 mnuCorporateColours.Checked = False
-If GetSetting(app.exename, "Colours", "Corporate") = "YES" Then
+If GetSetting(App.EXEName, "Colours", "Corporate") = "YES" Then
     mnuCorporateColours_Click
 Else
     mbCorporate = False
@@ -1053,10 +1061,10 @@ Next i
 End Sub
 
 Private Sub mnuNew_Click()
-Call ShellExecute(Me.hwnd, "open", app.exename + ".exe", "", "", 4)
+Call ShellExecute(Me.hwnd, "open", App.EXEName + ".exe", "", "", 4)
 Dim i As Integer
-i = frmMain.left
-If i > 80 Then frmMain.left = i - 80
+i = frmMain.Left
+If i > 80 Then frmMain.Left = i - 80
 End Sub
 
 Private Sub mnuReset_Click()
@@ -1079,26 +1087,45 @@ picUpgrade_Click
 End Sub
 
 Private Sub optLayPc_Click(Index As Integer)
-LayPc = Val(optLayPc(Index).caption)
-mnuLayPc.caption = "Lay Commission " + CStr(LayPc) + "%"
+LayPc = Val(optLayPc(Index).Caption)
+mnuLayPc.Caption = "Lay Commission " + CStr(LayPc) + "%"
 End Sub
 
-
-
+Private Sub optBackPc_Click(Index As Integer)
+BackPc = Val(optBackPc(Index).Caption)
+mnuBackPc.Caption = "Back Commission " + CStr(BackPc) + "%"
+End Sub
+Private Sub optBackPc_MouseDown(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim d As Double
+If Button = vbRightButton Then
+    If Index > 0 Then
+        d = Val(InputBox("Enter Custom Back Percentage", "Back %ge"))
+        If d > 0 And d < 100 Then
+            optBackPc(Index).Caption = CStr(d)
+            optBackPc(Index).SetFocus
+            BackPc = d
+            optBackPc(Index).Value = True
+            Call optBackPc_Click(Index)
+        End If
+    Else
+        MsgBox "First Percentage is fixed at zero percent", vbOKOnly + vbInformation, "Custom Lay Percentage"
+    End If
+End If
+End Sub
 Private Sub optLayPc_MouseDown(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
 Dim d As Double
 If Button = vbRightButton Then
     If Index > 0 Then
         d = Val(InputBox("Enter Custom Lay Percentage", "Lay %ge"))
         If d > 0 And d < 100 Then
-            optLayPc(Index).caption = CStr(d)
+            optLayPc(Index).Caption = CStr(d)
             optLayPc(Index).SetFocus
             LayPc = d
-            optLayPc(Index).value = True
+            optLayPc(Index).Value = True
             Call optLayPc_Click(Index)
         End If
     Else
-        Msgbox "First Percentage is fixed at zero percent", vbOkOnly + vbInformation, "Custom Lay Percentage"
+        MsgBox "First Percentage is fixed at zero percent", vbOKOnly + vbInformation, "Custom Lay Percentage"
     End If
 End If
 End Sub
@@ -1106,27 +1133,27 @@ End Sub
 
 
 Private Sub picDutch_Click()
-frmMain.visible = False 'hide
+frmMain.Visible = False 'hide
 
 If sCompare = "" Then
-    frmDutch.lblCompare.caption = "Comparison Bet: None Set"
+    frmDutch.lblCompare.Caption = "Comparison Bet: None Set"
 Else
-    frmDutch.lblCompare.caption = "Compare : " & sCompare
+    frmDutch.lblCompare.Caption = "Compare : " & sCompare
 End If
 frmDutch.Top = frmMain.Top
-frmDutch.left = frmMain.left
-frmDutch.show
+frmDutch.Left = frmMain.Left
+frmDutch.Show
 
 End Sub
 
 Private Sub picUpgrade_Click()
-If picUpgrade.visible Then Call mnuAbout_Click
+If picUpgrade.Visible Then Call mnuAbout_Click
 
 End Sub
 
 
 Private Sub txtBackDesc_KeyUp(KeyCode As Integer, Shift As Integer)
-frmMain.caption = "Lay Odds Equalizer - Bet=" + txtBackDesc.Text
+frmMain.Caption = "Lay Odds Equalizer - Bet=" + txtBackDesc.Text
 End Sub
 
 Private Sub txtBackOdds_GotFocus()

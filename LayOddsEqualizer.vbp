@@ -1,6 +1,6 @@
 Type=Exe
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\windows\system32\stdole2.tlb#OLE Automation
-Reference=*\G{6B263850-900B-11D0-9484-00A0C91110ED}#1.0#0#C:\windows\system32\MSSTDFMT.DLL#Microsoft Data Formatting Object Library 6.0 (SP6)
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\Windows\System32\stdole2.tlb#OLE Automation
+Reference=*\G{6B263850-900B-11D0-9484-00A0C91110ED}#1.0#0#..\..\..\..\Windows\system32\msstdfmt.dll#Microsoft Data Formatting Object Library 6.0 (SP6)
 Module=Module1; Module1.bas
 Form=frmMain.frm
 Form=frmDutch.frm
