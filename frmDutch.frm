@@ -6,20 +6,13 @@ Begin VB.Form frmDutch
    ClientLeft      =   150
    ClientTop       =   435
    ClientWidth     =   6450
-   BeginProperty Font 
-   EndProperty
-   Font            =   "frmDutch.frx":0000
-   Icon            =   "frmDutch.frx":0018
+   Icon            =   "frmDutch.frx":0000
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
-   MinButton       =   0   'False
    ScaleHeight     =   7665
    ScaleWidth      =   6450
    Begin VB.Frame fraCompare 
       BorderStyle     =   0  'None
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmDutch.frx":045A
       Height          =   255
       Left            =   60
       TabIndex        =   150
@@ -28,9 +21,6 @@ Begin VB.Form frmDutch
       Begin VB.Label lblCompare 
          AutoSize        =   -1  'True
          Caption         =   "Comparison Bet: Back"
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0472
          Height          =   195
          Left            =   0
          TabIndex        =   151
@@ -39,9 +29,6 @@ Begin VB.Form frmDutch
       End
    End
    Begin VB.ComboBox cmbRunners 
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmDutch.frx":048A
       Height          =   315
       Left            =   3540
       TabIndex        =   3
@@ -51,9 +38,6 @@ Begin VB.Form frmDutch
    Begin VB.CommandButton cmdDistribute 
       Appearance      =   0  'Flat
       Caption         =   "DISTRIBUTE"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmDutch.frx":04A2
       Height          =   285
       Left            =   3730
       TabIndex        =   146
@@ -61,9 +45,6 @@ Begin VB.Form frmDutch
       Width           =   1155
    End
    Begin VB.TextBox txtTotalBet 
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmDutch.frx":04BA
       Height          =   285
       Left            =   2680
       TabIndex        =   145
@@ -73,9 +54,6 @@ Begin VB.Form frmDutch
    Begin VB.Frame fraDutch 
       BackColor       =   &H00C0C0C0&
       Caption         =   " Bet                      Odds      Comm.   Stake            Action    Result           Profit"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmDutch.frx":04D2
       ForeColor       =   &H00800080&
       Height          =   6855
       Left            =   120
@@ -83,9 +61,6 @@ Begin VB.Form frmDutch
       Top             =   525
       Width           =   6255
       Begin VB.ComboBox cboRound 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":04EA
          Height          =   315
          Left            =   240
          TabIndex        =   149
@@ -93,9 +68,6 @@ Begin VB.Form frmDutch
          Width           =   1335
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0502
          Height          =   285
          Index           =   19
          Left            =   120
@@ -104,9 +76,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":051A
          Height          =   285
          Index           =   19
          Left            =   1320
@@ -115,9 +84,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0532
          Height          =   285
          Index           =   19
          Left            =   1980
@@ -126,9 +92,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":054A
          Height          =   285
          Index           =   19
          Left            =   2580
@@ -138,9 +101,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0562
          Height          =   285
          Index           =   19
          Left            =   4200
@@ -150,9 +110,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":057A
          Height          =   285
          Index           =   19
          Left            =   5160
@@ -164,8 +121,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":0592
          Height          =   285
          Index           =   19
          Left            =   3585
@@ -174,9 +137,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":05AC
          Height          =   285
          Index           =   18
          Left            =   120
@@ -185,9 +145,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":05C4
          Height          =   285
          Index           =   18
          Left            =   1320
@@ -196,9 +153,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":05DC
          Height          =   285
          Index           =   18
          Left            =   1980
@@ -207,9 +161,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":05F4
          Height          =   285
          Index           =   18
          Left            =   2580
@@ -219,9 +170,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":060C
          Height          =   285
          Index           =   18
          Left            =   4200
@@ -231,9 +179,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0624
          Height          =   285
          Index           =   18
          Left            =   5160
@@ -245,8 +190,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":063C
          Height          =   285
          Index           =   18
          Left            =   3585
@@ -255,9 +206,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0656
          Height          =   285
          Index           =   17
          Left            =   120
@@ -266,9 +214,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":066E
          Height          =   285
          Index           =   17
          Left            =   1320
@@ -277,9 +222,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0686
          Height          =   285
          Index           =   17
          Left            =   1980
@@ -288,9 +230,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":069E
          Height          =   285
          Index           =   17
          Left            =   2580
@@ -300,9 +239,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":06B6
          Height          =   285
          Index           =   17
          Left            =   4200
@@ -312,9 +248,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":06CE
          Height          =   285
          Index           =   17
          Left            =   5160
@@ -326,8 +259,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":06E6
          Height          =   285
          Index           =   17
          Left            =   3585
@@ -336,9 +275,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0700
          Height          =   285
          Index           =   16
          Left            =   120
@@ -347,9 +283,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0718
          Height          =   285
          Index           =   16
          Left            =   1320
@@ -358,9 +291,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0730
          Height          =   285
          Index           =   16
          Left            =   1980
@@ -369,9 +299,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0748
          Height          =   285
          Index           =   16
          Left            =   2580
@@ -381,9 +308,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0760
          Height          =   285
          Index           =   16
          Left            =   4200
@@ -393,9 +317,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0778
          Height          =   285
          Index           =   16
          Left            =   5160
@@ -407,8 +328,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":0790
          Height          =   285
          Index           =   16
          Left            =   3585
@@ -417,9 +344,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":07AA
          Height          =   285
          Index           =   15
          Left            =   120
@@ -428,9 +352,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":07C2
          Height          =   285
          Index           =   15
          Left            =   1320
@@ -439,9 +360,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":07DA
          Height          =   285
          Index           =   15
          Left            =   1980
@@ -450,9 +368,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":07F2
          Height          =   285
          Index           =   15
          Left            =   2580
@@ -462,9 +377,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":080A
          Height          =   285
          Index           =   15
          Left            =   4200
@@ -474,9 +386,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0822
          Height          =   285
          Index           =   15
          Left            =   5160
@@ -488,8 +397,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":083A
          Height          =   285
          Index           =   15
          Left            =   3585
@@ -498,9 +413,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0854
          Height          =   285
          Index           =   14
          Left            =   120
@@ -509,9 +421,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":086C
          Height          =   285
          Index           =   14
          Left            =   1320
@@ -520,9 +429,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0884
          Height          =   285
          Index           =   14
          Left            =   1980
@@ -531,9 +437,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":089C
          Height          =   285
          Index           =   14
          Left            =   2580
@@ -543,9 +446,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":08B4
          Height          =   285
          Index           =   14
          Left            =   4200
@@ -555,9 +455,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":08CC
          Height          =   285
          Index           =   14
          Left            =   5160
@@ -569,8 +466,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":08E4
          Height          =   285
          Index           =   14
          Left            =   3585
@@ -579,9 +482,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":08FE
          Height          =   285
          Index           =   13
          Left            =   120
@@ -590,9 +490,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0916
          Height          =   285
          Index           =   13
          Left            =   1320
@@ -601,9 +498,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":092E
          Height          =   285
          Index           =   13
          Left            =   1980
@@ -612,9 +506,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0946
          Height          =   285
          Index           =   13
          Left            =   2580
@@ -624,9 +515,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":095E
          Height          =   285
          Index           =   13
          Left            =   4200
@@ -636,9 +524,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0976
          Height          =   285
          Index           =   13
          Left            =   5160
@@ -650,8 +535,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":098E
          Height          =   285
          Index           =   13
          Left            =   3585
@@ -660,9 +551,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":09A8
          Height          =   285
          Index           =   12
          Left            =   120
@@ -671,9 +559,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":09C0
          Height          =   285
          Index           =   12
          Left            =   1320
@@ -682,9 +567,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":09D8
          Height          =   285
          Index           =   12
          Left            =   1980
@@ -693,9 +575,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":09F0
          Height          =   285
          Index           =   12
          Left            =   2580
@@ -705,9 +584,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0A08
          Height          =   285
          Index           =   12
          Left            =   4200
@@ -717,9 +593,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0A20
          Height          =   285
          Index           =   12
          Left            =   5160
@@ -731,8 +604,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":0A38
          Height          =   285
          Index           =   12
          Left            =   3585
@@ -741,9 +620,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0A52
          Height          =   285
          Index           =   11
          Left            =   120
@@ -752,9 +628,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0A6A
          Height          =   285
          Index           =   11
          Left            =   1320
@@ -763,9 +636,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0A82
          Height          =   285
          Index           =   11
          Left            =   1980
@@ -774,9 +644,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0A9A
          Height          =   285
          Index           =   11
          Left            =   2580
@@ -786,9 +653,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0AB2
          Height          =   285
          Index           =   11
          Left            =   4200
@@ -798,9 +662,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0ACA
          Height          =   285
          Index           =   11
          Left            =   5160
@@ -812,8 +673,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":0AE2
          Height          =   285
          Index           =   11
          Left            =   3585
@@ -822,9 +689,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0AFC
          Height          =   285
          Index           =   10
          Left            =   120
@@ -833,9 +697,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0B14
          Height          =   285
          Index           =   10
          Left            =   1320
@@ -844,9 +705,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0B2C
          Height          =   285
          Index           =   10
          Left            =   1980
@@ -855,9 +713,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0B44
          Height          =   285
          Index           =   10
          Left            =   2580
@@ -867,9 +722,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0B5C
          Height          =   285
          Index           =   10
          Left            =   4200
@@ -879,9 +731,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0B74
          Height          =   285
          Index           =   10
          Left            =   5160
@@ -893,8 +742,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":0B8C
          Height          =   285
          Index           =   10
          Left            =   3585
@@ -903,9 +758,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0BA6
          Height          =   285
          Index           =   9
          Left            =   120
@@ -914,9 +766,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0BBE
          Height          =   285
          Index           =   9
          Left            =   1320
@@ -925,9 +774,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0BD6
          Height          =   285
          Index           =   9
          Left            =   1980
@@ -936,9 +782,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0BEE
          Height          =   285
          Index           =   9
          Left            =   2580
@@ -948,9 +791,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0C06
          Height          =   285
          Index           =   9
          Left            =   4200
@@ -960,9 +800,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0C1E
          Height          =   285
          Index           =   9
          Left            =   5160
@@ -974,8 +811,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":0C36
          Height          =   285
          Index           =   9
          Left            =   3585
@@ -984,9 +827,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0C50
          Height          =   285
          Index           =   8
          Left            =   120
@@ -995,9 +835,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0C68
          Height          =   285
          Index           =   8
          Left            =   1320
@@ -1006,9 +843,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0C80
          Height          =   285
          Index           =   8
          Left            =   1980
@@ -1017,9 +851,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0C98
          Height          =   285
          Index           =   8
          Left            =   2580
@@ -1029,9 +860,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0CB0
          Height          =   285
          Index           =   8
          Left            =   4200
@@ -1041,9 +869,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0CC8
          Height          =   285
          Index           =   8
          Left            =   5160
@@ -1055,8 +880,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":0CE0
          Height          =   285
          Index           =   8
          Left            =   3585
@@ -1065,9 +896,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0CFA
          Height          =   285
          Index           =   7
          Left            =   120
@@ -1076,9 +904,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0D12
          Height          =   285
          Index           =   7
          Left            =   1320
@@ -1087,9 +912,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0D2A
          Height          =   285
          Index           =   7
          Left            =   1980
@@ -1098,9 +920,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0D42
          Height          =   285
          Index           =   7
          Left            =   2580
@@ -1110,9 +929,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0D5A
          Height          =   285
          Index           =   7
          Left            =   4200
@@ -1122,9 +938,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0D72
          Height          =   285
          Index           =   7
          Left            =   5160
@@ -1136,8 +949,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":0D8A
          Height          =   285
          Index           =   7
          Left            =   3585
@@ -1146,9 +965,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0DA4
          Height          =   285
          Index           =   6
          Left            =   120
@@ -1157,9 +973,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0DBC
          Height          =   285
          Index           =   6
          Left            =   1320
@@ -1168,9 +981,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0DD4
          Height          =   285
          Index           =   6
          Left            =   1980
@@ -1179,9 +989,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0DEC
          Height          =   285
          Index           =   6
          Left            =   2580
@@ -1191,9 +998,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0E04
          Height          =   285
          Index           =   6
          Left            =   4200
@@ -1203,9 +1007,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0E1C
          Height          =   285
          Index           =   6
          Left            =   5160
@@ -1217,8 +1018,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":0E34
          Height          =   285
          Index           =   6
          Left            =   3585
@@ -1227,9 +1034,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0E4E
          Height          =   285
          Index           =   5
          Left            =   120
@@ -1238,9 +1042,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0E66
          Height          =   285
          Index           =   5
          Left            =   1320
@@ -1249,9 +1050,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0E7E
          Height          =   285
          Index           =   5
          Left            =   1980
@@ -1260,9 +1058,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0E96
          Height          =   285
          Index           =   5
          Left            =   2580
@@ -1272,9 +1067,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0EAE
          Height          =   285
          Index           =   5
          Left            =   4200
@@ -1284,9 +1076,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0EC6
          Height          =   285
          Index           =   5
          Left            =   5160
@@ -1298,8 +1087,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":0EDE
          Height          =   285
          Index           =   5
          Left            =   3585
@@ -1308,9 +1103,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0EF8
          Height          =   285
          Index           =   4
          Left            =   120
@@ -1319,9 +1111,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0F10
          Height          =   285
          Index           =   4
          Left            =   1320
@@ -1330,9 +1119,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0F28
          Height          =   285
          Index           =   4
          Left            =   1980
@@ -1341,9 +1127,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0F40
          Height          =   285
          Index           =   4
          Left            =   2580
@@ -1353,9 +1136,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0F58
          Height          =   285
          Index           =   4
          Left            =   4200
@@ -1365,9 +1145,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0F70
          Height          =   285
          Index           =   4
          Left            =   5160
@@ -1379,8 +1156,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":0F88
          Height          =   285
          Index           =   4
          Left            =   3585
@@ -1389,9 +1172,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0FA2
          Height          =   285
          Index           =   3
          Left            =   120
@@ -1400,9 +1180,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0FBA
          Height          =   285
          Index           =   3
          Left            =   1320
@@ -1411,9 +1188,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0FD2
          Height          =   285
          Index           =   3
          Left            =   1980
@@ -1422,9 +1196,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":0FEA
          Height          =   285
          Index           =   3
          Left            =   2580
@@ -1434,9 +1205,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":1002
          Height          =   285
          Index           =   3
          Left            =   4200
@@ -1446,9 +1214,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":101A
          Height          =   285
          Index           =   3
          Left            =   5160
@@ -1460,8 +1225,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":1032
          Height          =   285
          Index           =   3
          Left            =   3585
@@ -1470,9 +1241,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":104C
          Height          =   285
          Index           =   2
          Left            =   120
@@ -1481,9 +1249,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":1064
          Height          =   285
          Index           =   2
          Left            =   1320
@@ -1492,9 +1257,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":107C
          Height          =   285
          Index           =   2
          Left            =   1980
@@ -1503,9 +1265,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":1094
          Height          =   285
          Index           =   2
          Left            =   2580
@@ -1515,9 +1274,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":10AC
          Height          =   285
          Index           =   2
          Left            =   4200
@@ -1527,9 +1283,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":10C4
          Height          =   285
          Index           =   2
          Left            =   5160
@@ -1541,8 +1294,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":10DC
          Height          =   285
          Index           =   2
          Left            =   3585
@@ -1551,9 +1310,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":10F6
          Height          =   285
          Index           =   1
          Left            =   120
@@ -1562,9 +1318,6 @@ Begin VB.Form frmDutch
          Width           =   1215
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":110E
          Height          =   285
          Index           =   1
          Left            =   1320
@@ -1573,9 +1326,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":1126
          Height          =   285
          Index           =   1
          Left            =   1980
@@ -1584,9 +1334,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtStake 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":113E
          Height          =   285
          Index           =   1
          Left            =   2580
@@ -1596,9 +1343,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":1156
          Height          =   285
          Index           =   1
          Left            =   4200
@@ -1608,9 +1352,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":116E
          Height          =   285
          Index           =   1
          Left            =   5160
@@ -1622,8 +1363,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":1186
          Height          =   285
          Index           =   1
          Left            =   3585
@@ -1635,8 +1382,14 @@ Begin VB.Form frmDutch
          Appearance      =   0  'Flat
          Caption         =   "BASE"
          BeginProperty Font 
+            Name            =   "Times New Roman"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
          EndProperty
-         Font            =   "frmDutch.frx":11A0
          Height          =   285
          Index           =   0
          Left            =   3585
@@ -1646,9 +1399,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtProfit 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":11BA
          Height          =   285
          Index           =   0
          Left            =   5160
@@ -1658,9 +1408,6 @@ Begin VB.Form frmDutch
       End
       Begin VB.TextBox txtResult 
          Enabled         =   0   'False
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":11D2
          Height          =   285
          Index           =   0
          Left            =   4200
@@ -1678,9 +1425,6 @@ Begin VB.Form frmDutch
             LCID            =   2057
             SubFormatType   =   2
          EndProperty
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":11EA
          Height          =   285
          Index           =   0
          Left            =   2580
@@ -1689,9 +1433,6 @@ Begin VB.Form frmDutch
          Width           =   975
       End
       Begin VB.TextBox txtComm 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":1202
          Height          =   285
          Index           =   0
          Left            =   1980
@@ -1700,9 +1441,6 @@ Begin VB.Form frmDutch
          Width           =   615
       End
       Begin VB.TextBox txtOdds 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":121A
          Height          =   285
          Index           =   0
          Left            =   1320
@@ -1711,9 +1449,6 @@ Begin VB.Form frmDutch
          Width           =   675
       End
       Begin VB.TextBox txtBet 
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":1232
          Height          =   285
          Index           =   0
          Left            =   120
@@ -1725,9 +1460,6 @@ Begin VB.Form frmDutch
          AutoSize        =   -1  'True
          BackColor       =   &H00C0C0C0&
          Caption         =   "Total Bet"
-         BeginProperty Font 
-         EndProperty
-         Font            =   "frmDutch.frx":124A
          ForeColor       =   &H00800080&
          Height          =   195
          Left            =   1815
@@ -1739,9 +1471,6 @@ Begin VB.Form frmDutch
    End
    Begin VB.OptionButton optLegs 
       Caption         =   "Race"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmDutch.frx":1262
       Height          =   195
       Index           =   2
       Left            =   2640
@@ -1751,9 +1480,6 @@ Begin VB.Form frmDutch
    End
    Begin VB.OptionButton optLegs 
       Caption         =   "Treble"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmDutch.frx":127A
       Height          =   195
       Index           =   1
       Left            =   1560
@@ -1763,9 +1489,6 @@ Begin VB.Form frmDutch
    End
    Begin VB.OptionButton optLegs 
       Caption         =   "Double"
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmDutch.frx":1292
       Height          =   195
       Index           =   0
       Left            =   480
@@ -1776,9 +1499,6 @@ Begin VB.Form frmDutch
    End
    Begin VB.Label lbl 
       AutoSize        =   -1  'True
-      BeginProperty Font 
-      EndProperty
-      Font            =   "frmDutch.frx":12AA
       Height          =   195
       Left            =   4080
       TabIndex        =   147
@@ -1828,9 +1548,9 @@ Private Sub cboRound_Click()
     If mbLoading Then Exit Sub
     Dim i As Integer
     Dim dRoundTo As Double
-    Select Case cboRound.listindex
+    Select Case cboRound.ListIndex
     Case 0:
-        cmdDistribute.value = True
+        cmdDistribute.Value = True
         Exit Sub
     Case 1:
         dRoundTo = 0.25
@@ -1872,8 +1592,8 @@ RoundNumber = Round(OriginalNumber / RoundTo, 0) * RoundTo
 End Function
 Private Sub cmbRunners_Click()
     If mbLoading Then Exit Sub
-    miLegs = cmbRunners.listindex + 2
-    SaveSetting app.exename, "Settings", "DefaultRunners", CStr(cmbRunners.listindex)
+    miLegs = cmbRunners.ListIndex + 2
+    SaveSetting App.EXEName, "Settings", "DefaultRunners", CStr(cmbRunners.ListIndex)
     Call resizeForm
 End Sub
 Private Function bMissingOdds() As Boolean
@@ -1889,7 +1609,7 @@ End Function
 Private Sub cmdBase_Click(Index As Integer)
 txtOdds(Index).SetFocus
 If bMissingOdds() Then
-    Msgbox "Missing Odds!  Please enter Odds for each leg", vbExclamation
+    MsgBox "Missing Odds!  Please enter Odds for each leg", vbExclamation
     Exit Sub
 End If
 miBase = Index
@@ -1906,7 +1626,7 @@ Dim sComm As String
 Dim i As Integer
 txtTotalBet.SetFocus
 If bMissingOdds() Then
-    Msgbox "Missing Odds!  Please enter Odds for each bet", vbExclamation
+    MsgBox "Missing Odds!  Please enter Odds for each bet", vbExclamation
     Exit Sub
 End If
 
@@ -1920,7 +1640,7 @@ If miBase <> -1 Then
     If sComm = "" Then
         dComm = 0
     ElseIf Right(sComm, 1) = "%" Then
-        dComm = Val(left(sComm, Len(sComm) - 1))
+        dComm = Val(Left(sComm, Len(sComm) - 1))
     Else
         dComm = Val(sComm)
     End If
@@ -1945,7 +1665,7 @@ For i = 0 To miLegs - 1
     If sComm = "" Then
         dComm = 0
     ElseIf Right(sComm, 1) = "%" Then
-        dComm = Val(left(sComm, Len(sComm) - 1))
+        dComm = Val(Left(sComm, Len(sComm) - 1))
     Else
         dComm = Val(sComm)
     End If
@@ -1969,7 +1689,7 @@ For i = 0 To miLegs - 1
     End If
 Next
 'round totals?
-If cboRound.listindex <> 0 Then Call cboRound_Click
+If cboRound.ListIndex <> 0 Then Call cboRound_Click
 End Sub
 
 
@@ -1978,7 +1698,7 @@ Private Sub Form_Load()
 'Const Purple As Long = &H800080
 'Const Grey As Long = &HC0C0C0
 Dim i As Integer, iDefaultRunners As Integer
-iDefaultRunners = CInt("0" + GetSetting(app.exename, "Settings", "DefaultRunners"))
+iDefaultRunners = CInt("0" + GetSetting(App.EXEName, "Settings", "DefaultRunners"))
 With cmbRunners
 For i = 2 To 20
     .AddItem (CStr(i) + " Runners")
@@ -1994,18 +1714,18 @@ End With
 miBase = -1
 
 mbLoading = True
-cboRound.listindex = 0
+cboRound.ListIndex = 0
 
-cmbRunners.listindex = iDefaultRunners
+cmbRunners.ListIndex = iDefaultRunners
 miLegs = iDefaultRunners + 2
 Select Case miLegs
-    Case 2: optLegs(0).value = True
-    Case 3: optLegs(1).value = True
-    Case Else: optLegs(2).value = True
+    Case 2: optLegs(0).Value = True
+    Case 3: optLegs(1).Value = True
+    Case Else: optLegs(2).Value = True
 End Select
 mbLoading = False
 
-If mbCorporate Then
+If bCorporate Then
     shpBox.BorderColor = vbButtonFace
     shpBox.FillColor = vbButtonFace
     fraDutch.ForeColor = vbBlack
@@ -2029,8 +1749,8 @@ Private Sub Form_Unload(Cancel As Integer)
 End Sub
 
 Private Sub mnuExit_Click()
-frmDutch.visible = False 'hide
-frmMain.visible = True 'show
+frmDutch.Visible = False 'hide
+frmMain.Visible = True 'show
 
 End Sub
 
@@ -2061,17 +1781,19 @@ Private Sub mnuReset_Click()
 End Sub
 
 Private Sub mnuNew_Click()
-Call ShellExecute(Me.hwnd, "open", app.exename + ".exe", "", "", 4)
+SaveSetting App.EXEName, "Settings", "Mode", "Dutch"
+DoEvents
+Call ShellExecute(Me.hwnd, "open", App.EXEName + ".exe", "", "", 4)
 Dim i As Integer
-i = frmMain.left
-If i > 80 Then frmMain.left = i - 80
+i = frmMain.Left
+If i > 80 Then frmMain.Left = i - 80
 End Sub
 
 Private Sub optLegs_Click(Index As Integer)
     If mbLoading Then Exit Sub
-    If optLegs(0).value Then miLegs = 2: cmbRunners.listindex = 0
-    If optLegs(1).value Then miLegs = 3: cmbRunners.listindex = 1
-    If optLegs(2).value Then
+    If optLegs(0).Value Then miLegs = 2: cmbRunners.ListIndex = 0
+    If optLegs(1).Value Then miLegs = 3: cmbRunners.ListIndex = 1
+    If optLegs(2).Value Then
         cmbRunners.SetFocus
     End If
     Call resizeForm
@@ -2081,13 +1803,13 @@ Private Sub resizeForm()
     If miLegs < 1 Or miLegs > 20 Then Exit Sub
     Dim i As Integer
     For i = miLegs To 19
-        txtBet(i).visible = False
-        txtComm(i).visible = False
-        txtOdds(i).visible = False
-        txtProfit(i).visible = False
-        txtResult(i).visible = False
-        txtStake(i).visible = False
-        cmdBase(i).visible = False
+        txtBet(i).Visible = False
+        txtComm(i).Visible = False
+        txtOdds(i).Visible = False
+        txtProfit(i).Visible = False
+        txtResult(i).Visible = False
+        txtStake(i).Visible = False
+        cmdBase(i).Visible = False
     Next i
     Select Case miLegs
         Case 2:
@@ -2103,13 +1825,13 @@ Private Sub resizeForm()
         Next i
     End Select
     For i = 2 To miLegs - 1
-        txtBet(i).visible = True
-        txtComm(i).visible = True
-        txtOdds(i).visible = True
-        txtProfit(i).visible = True
-        txtResult(i).visible = True
-        txtStake(i).visible = True
-        cmdBase(i).visible = True
+        txtBet(i).Visible = True
+        txtComm(i).Visible = True
+        txtOdds(i).Visible = True
+        txtProfit(i).Visible = True
+        txtResult(i).Visible = True
+        txtStake(i).Visible = True
+        cmdBase(i).Visible = True
     Next i
     shpBox.Height = 7395 - ((20 - miLegs) * 300)
     txtTotalBet.Top = 6960 - ((20 - miLegs) * 300)
@@ -2140,7 +1862,7 @@ End Sub
 
 Private Sub txtBet_KeyUp(Index As Integer, KeyCode As Integer, Shift As Integer)
     If Index = 0 Then
-        frmDutch.caption = "Lay Odds Equalizer - Dutch Calculator - Bet=" + txtBet(0).Text
+        frmDutch.Caption = "Lay Odds Equalizer - Dutch Calculator - Bet=" + txtBet(0).Text
     End If
 End Sub
 
@@ -2158,7 +1880,7 @@ End Sub
 Private Sub txtComm_LostFocus(Index As Integer)
 Dim sComm As String
 sComm = txtComm(Index).Text
-If Right(sComm, 1) = "%" Then sComm = left(sComm, Len(sComm) - 1)
+If Right(sComm, 1) = "%" Then sComm = Left(sComm, Len(sComm) - 1)
 If Len(sComm) Then txtComm(Index).Text = Format(Val(sComm), "0.000") + "%"
 End Sub
 

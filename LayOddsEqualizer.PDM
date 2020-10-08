@@ -92,7 +92,7 @@ Handler2=PDWizard.WebPostDplySubWiz
 
 [Package|Lay Odds Equalizer|Root]
 SubWizProgID=PDWizard.SetupPkgSubWiz
-BuildFolder=z:\home\db\git\LayOddsEqualizer\Setup
+BuildFolder=C:\Users\david\Downloads\LayOddsEqualizer-master\Setup
 
 [Package|Lay Odds Equalizer|Configure DAO ISAMs]
 Applicable=No
@@ -102,6 +102,7 @@ JetWorkspace=
 ODBCDirect=
 
 [Package|Lay Odds Equalizer|Files Found]
+icon.png=C:\Users\david\Downloads\LayOddsEqualizer-master\icon.png
 
 [Package|Lay Odds Equalizer|Files Released]
 
@@ -109,16 +110,16 @@ ODBCDirect=
 
 [Package|Lay Odds Equalizer|Out-of-Date Dependency Information]
 C:\Windows\syswow64\MCI32.OCX=
+C:\Windows\System32\msstdfmt.dll=
 
 [Package|Lay Odds Equalizer|Files Added]
-z:\home\db\git\layoddsequalizer\icon.png=
+icon.png=
 
 [Package|Lay Odds Equalizer|Files Removed]
 
 [Package|Lay Odds Equalizer|Files In Project]
 C:\Windows\System32\msvbvm60.dll=Yes
 C:\Windows\System32\VB6STKIT.DLL=Yes
-Z:\home\db\git\LayOddsEqualizer\LayOddsEqualizer.exe=Yes
 C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
 C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
 C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
@@ -128,7 +129,8 @@ C:\windows\system32\MSSTDFMT.DLL=Yes
 C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
 C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
 C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
-Z:\home\db\git\LayOddsEqualizer\icon.png=Yes
+C:\Users\david\Downloads\LayOddsEqualizer-master\LayOddsEqualizer.exe=Yes
+C:\Users\david\Downloads\LayOddsEqualizer-master\icon.png=Yes
 
 [Package|Lay Odds Equalizer|Configure Registry Files]
 Applicable=No
@@ -163,6 +165,8 @@ C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=
 C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
 Z:\home\db\git\LayOddsEqualizer\LayOddsEqualizer.exe=$(AppPath)
 Z:\home\db\git\LayOddsEqualizer\icon.png=$(AppPath)
+C:\Users\david\Downloads\LayOddsEqualizer-master\LayOddsEqualizer.exe=$(AppPath)
+C:\Users\david\Downloads\LayOddsEqualizer-master\icon.png=$(AppPath)
 
 [Package|Lay Odds Equalizer|Configure Shared Files]
 Applicable=Yes
@@ -170,22 +174,14 @@ C:\Users\DavidandJosie\SkyDrive\bonusbagging\LayOddsEqualizer\LayOddsEqualizer.e
 C:\Users\DavidandJosie\Documents\LayOddsEqualizer\Exe_2_0_0\LayOddsEqualizer.exe=No
 Z:\home\db\git\LayOddsEqualizer\LayOddsEqualizer.exe=No
 Z:\home\db\git\LayOddsEqualizer\icon.png=No
-C:\windows\system32\MSSTDFMT.DLL=No
+C:\windows\system32\MSSTDFMT.DLL=Yes
+C:\Users\david\Downloads\LayOddsEqualizer-master\LayOddsEqualizer.exe=No
+C:\Users\david\Downloads\LayOddsEqualizer-master\icon.png=No
 
 [Package|Lay Odds Equalizer|Distribution]
 Type=single
 Size=
 Title=Lay Odds Equalizer
-
-[Package|Lay Odds Equalizer|Package]
-PackageFolder=z:\home\db\git\LayOddsEqualizer\Setup
-ProjectFolder=Z:\home\db\git\LayOddsEqualizer
-ServerSideCab=
-File1=z:\home\db\git\LayOddsEqualizer\Setup\setup.exe
-File2=z:\home\db\git\LayOddsEqualizer\Setup\Setup.Lst
-File3=z:\home\db\git\LayOddsEqualizer\Setup\LayOddsEqualizer.CAB
-Handler1=PDWizard.FolderDplySubWiz
-Handler2=PDWizard.WebPostDplySubWiz
 
 [Package|Lay Odds Equalizer|IconGroups]
 Group0=LayOddsEqualizer
@@ -197,3 +193,13 @@ Icon1=LayOddsEqualizer.exe
 Title1=Lay Odds Equalizer
 StartIn1=$(AppPath)
 Key1=Icon1
+
+[Package|Lay Odds Equalizer|Package]
+PackageFolder=C:\Users\david\Downloads\LayOddsEqualizer-master\Setup
+ProjectFolder=C:\Users\david\Downloads\LayOddsEqualizer-master
+ServerSideCab=
+File1=C:\Users\david\Downloads\LayOddsEqualizer-master\Setup\setup.exe
+File2=C:\Users\david\Downloads\LayOddsEqualizer-master\Setup\Setup.Lst
+File3=C:\Users\david\Downloads\LayOddsEqualizer-master\Setup\LayOddsEqualizer.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
