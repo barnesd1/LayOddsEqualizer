@@ -1378,11 +1378,11 @@ Case 1: mult = 1.01
 Case 2: mult = 1.05
 End Select
 
-If optUO(0).Value Or optUO(2).Value Then
+If optUO(0).Value Or optUO(2).Value Or Not bEWMode Then
 txtLayStake.Text = ConvertOdds(LayStake * mult)
 LayStake = Val(txtLayStake.Text)
 End If
-If optUO(1).Value Or optUO(2).Value Then
+If bEWMode And (optUO(1).Value Or optUO(2).Value) Then
 txtPlaceLayStake.Text = ConvertOdds(PlaceLayStake * mult)
 PlaceLayStake = Val(txtPlaceLayStake.Text)
 End If
@@ -1400,11 +1400,11 @@ Case 1: mult = 0.99
 Case 2: mult = 0.95
 End Select
 
-If optUO(0).Value Or optUO(2).Value Then
+If optUO(0).Value Or optUO(2).Value Or Not bEWMode Then
 txtLayStake.Text = ConvertOdds(LayStake * mult)
 LayStake = Val(txtLayStake.Text)
 End If
-If optUO(1).Value Or optUO(2).Value Then
+If bEWMode And (optUO(1).Value Or optUO(2).Value) Then
 txtPlaceLayStake.Text = ConvertOdds(PlaceLayStake * mult)
 PlaceLayStake = Val(txtPlaceLayStake.Text)
 End If
