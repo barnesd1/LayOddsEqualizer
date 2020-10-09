@@ -1055,6 +1055,7 @@ End Sub
 Private Sub cmdLoseZeroBack_Click()
 'If picUpgrade.Visible Then mnuAbout_Click: Exit Sub
 If BackStake = 0 Or LayOdds = 0 Or BackOdds = 0 Then Beep: Exit Sub
+Dim lIterations As Long
 
 If bEWMode Then
     mbCalcing = True
@@ -1068,7 +1069,8 @@ If bEWMode Then
     optUO(0).Value = True
     Do
         Call lblU_Click(0)
-    Loop While BetfairLayCost + PlaceBetfairLayCost > 0.1
+        lIterations = lIterations + 1
+    Loop While BetfairLayCost + PlaceBetfairLayCost > 0.105 And lIterations < 10000
     mbCalcing = False
     
 Else
@@ -1081,13 +1083,15 @@ Else
             LayStake = LayStake + 0.01
             txtLayStake.Text = Format(LayStake, "0.00")
             cmdNECalc.Value = True
-        Loop While Val(Format(BetfairBackCost, "0.00")) > 0
+            lIterations = lIterations + 1
+        Loop While Val(Format(BetfairBackCost, "0.00")) > 0 And lIterations < 10000
     Else
         Do
             LayStake = LayStake - 0.01
             txtLayStake.Text = Format(LayStake, "0.00")
             cmdNECalc.Value = True
-        Loop While Val(Format(BetfairBackCost, "0.00")) < 0
+            lIterations = lIterations + 1
+        Loop While Val(Format(BetfairBackCost, "0.00")) < 0 And lIterations < 10000
     End If
     
     mbCalcing = False
@@ -1117,6 +1121,7 @@ End Sub
 Private Sub cmdLoseZeroLay_Click()
 'If picUpgrade.Visible Then mnuAbout_Click: Exit Sub
 If BackStake = 0 Or LayOdds = 0 Or BackOdds = 0 Then Beep: Exit Sub
+Dim lIterations As Long
 
 If bEWMode Then
     mbCalcing = True
@@ -1129,7 +1134,8 @@ If bEWMode Then
     optUO(1).Value = True
     Do
         Call lblU_Click(0)
-    Loop While BetfairLayCost + PlaceBetfairLayCost > 0.1
+        lIterations = lIterations + 1
+    Loop While BetfairLayCost + PlaceBetfairLayCost > 0.105 And lIterations < 10000
     mbCalcing = False
 Else
 
@@ -1143,13 +1149,15 @@ Else
             LayStake = LayStake - 0.01
             txtLayStake.Text = Format(LayStake, "0.00")
             cmdNECalc.Value = True
-        Loop While Val(Format(BetfairLayCost, "0.00")) > 0
+            lIterations = lIterations + 1
+        Loop While Val(Format(BetfairLayCost, "0.00")) > 0 And lIterations < 10000
     Else
         Do
             LayStake = LayStake + 0.01
             txtLayStake.Text = Format(LayStake, "0.00")
             cmdNECalc.Value = True
-        Loop While Val(Format(BetfairLayCost, "0.00")) < 0
+            lIterations = lIterations + 1
+        Loop While Val(Format(BetfairLayCost, "0.00")) < 0 And lIterations < 10000
     End If
     mbCalcing = False
 End If
@@ -1157,7 +1165,7 @@ Call AddToHistory
 End Sub
 
 Private Sub cmdPredictLose_Click()
-
+    Dim lIterations As Long
     mbCalcing = True
     cmdEqualize.Value = True
     If BetfairBackCost + PlaceBetfairBackCost < 0 And BetfairLayCost + PlaceBetfairBackCost < 0 And BetfairLayCost + PlaceBetfairLayCost < 0 Then
@@ -1167,8 +1175,9 @@ Private Sub cmdPredictLose_Click()
     End If
     optUO(1).Value = True
     Do
+        lIterations = lIterations + 1
         Call lblO_Click(0)
-    Loop While BetfairLayCost + PlaceBetfairBackCost > 0.1
+    Loop While BetfairLayCost + PlaceBetfairBackCost > 0.105 And lIterations < 10000
     mbCalcing = False
     Call AddToHistory
 End Sub
@@ -1221,6 +1230,8 @@ End Sub
 Private Sub Form_Unload(Cancel As Integer)
 SaveSettings
 End Sub
+
+
 
 
 

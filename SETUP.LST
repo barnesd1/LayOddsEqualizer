@@ -35,7 +35,7 @@ AppToUninstall=LayOddsEqualizer.exe
 [Setup1 Files]
 File1=@icon.png,$(AppPath),,,5/25/20 1:52:17 PM,1656,0.0.0.0
 File2=@msstdfmt.dll,$(AppPath),$(DLLSelfRegister),$(Shared),8/28/19 10:44:45 AM,130712,6.1.98.39
-File3=@LayOddsEqualizer.exe,$(AppPath),,,10/9/20 7:55:09 AM,159744,4.0.0.1
+File3=@LayOddsEqualizer.exe,$(AppPath),,,10/9/20 2:24:32 PM,159744,4.0.0.2
 
 ; The following lines may be deleted in order to obtain extra 
 ; space for customizing this file on a full installation diskette.
