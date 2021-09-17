@@ -1,4 +1,4 @@
-# LayOddsEqualizer
+## LayOddsEqualizer
 The Lay Odds Equalizer is a fantastic software tool for calculating the best lay bet when you are laying off a bookie bet against any exchange as well as a Dutching bet calculator.
 New for version 4 is an Each Way horse racing calculator.
 
@@ -10,3 +10,7 @@ Run LayOddsEqualizer.exe
 
 Example usage:
 Download LayOddsEqualizerBettingCalculator.odt and open in Word or it's equivalent.
+
+To run in a Docker container for Ubuntu/Debian:
+Follow instructions in SetupLayOddsEqualizerInDocker.txt.
+Then you can run the app using the the command loe in the terminal.

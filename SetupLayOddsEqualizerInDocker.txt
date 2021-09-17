@@ -1,0 +1,45 @@
+# Install Docker on Ubuntu/Debian
+sudo apt update
+sudo apt install curl -y
+curl https://get.docker.com | sudo bash
+# Add your user to docker group
+sudo usermod -aG docker $(whoami)
+# Refresh group list
+newgrp docker
+# Download docker-wine on linux
+wget https://raw.githubusercontent.com/scottyhardy/docker-wine/master/docker-wine
+# Move docker-wine script
+sudo mv docker-wine /usr/local/bin/docker-wine
+# Add executable permissions
+sudo chmod +x /usr/local/bin/docker-wine
+# Create volume used by docker-wine
+docker volume create winehome
+# Make directory LOESetup
+mkdir ~/Downloads/LOESetup
+cd ~/Downloads/LOESetup
+# Get VB6 runtime
+wget https://github.com/barnesd1/LayOddsEqualizer/raw/main/vb6runtime.exe
+# Get Setup Zip
+wget https://github.com/barnesd1/LayOddsEqualizer/raw/main/LayOddsEqualizerSetup.zip
+# Unzip the Setup files
+unzip ./LayOddsEqualizerSetup.zip
+# Create Dummy Container to copy setup files to /home/wineuser
+docker run -d --rm --name dummy -v winehome:/home/wineuser alpine tail -f /dev/null
+docker cp ./setup.exe dummy:/home/wineuser/setup.exe
+docker cp ./SETUP.LST dummy:/home/wineuser/SETUP.LST
+docker cp ./LayOddsEqualizer.CAB dummy:/home/wineuser/LayOddsEqualizer.CAB
+docker cp ./vb6runtime.exe dummy:/home/wineuser/vb6runtime.exe
+docker stop dummy
+# Install Visual Basic Runtime sp6 - untick 3rd party component option
+docker-wine wine z:\\home\\wineuser\\vb6runtime.exe
+# Install Lay Odds Equalizer in Wine - choose default options
+docker-wine wine z:\\home\\wineuser\\setup.exe
+#
+# Now Lay Odds Equalizer is installed in order to run it run on a 64 system run as below, [for 32 system remove (x86)]:
+# docker-wine wine 'C:\\Program Files (x86)\\LayOddsEqualizer\\LayOddsEqualizer.exe'
+# Setup an alias in bash with
+sudo echo "alias loe='docker-wine wine \"C:\\Program Files (x86)\\LayOddsEqualizer\\LayOddsEqualizer.exe\"'" >> ~/.bashrc
+# Onetime rerun bashrc
+. ~/.bashrc
+# Run Lay Odds Equalizer using the alias loe
+loe
