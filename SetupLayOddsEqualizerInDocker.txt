@@ -1,6 +1,6 @@
 # Install Docker on Ubuntu/Debian
 sudo apt update
-sudo apt install curl -y
+sudo apt install curl gedit -y
 curl https://get.docker.com | sudo bash
 # Add your user to docker group
 sudo usermod -aG docker $(whoami)
@@ -43,3 +43,20 @@ sudo echo "alias loe='docker-wine wine \"C:\\Program Files (x86)\\LayOddsEqualiz
 . ~/.bashrc
 # Run Lay Odds Equalizer using the alias loe
 loe
+# Alternative to having the Alias create a 2 line script 
+cd /usr/local/bin
+sudo gedit loe
+#!/usr/bin/bash
+docker-wine wine "C:\Program Files (x86)\LayOddsEqualizer\LayOddsEqualizer.exe"
+save and quit
+# Make file runnable
+sudo chmod +x loe
+# Create a shortcut
+sudo gedit /usr/share/applications/loe.desktop
+[Desktop Entry]
+Name=Lay Odds Equalizer
+Exec='/usr/local/bin/loe'
+Type=Application
+Categories=Utilities
+Icon=
+save and quit
